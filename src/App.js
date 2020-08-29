@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import Search from "./components/Search/index";
 import EmployeeCard from "./components/EmployeeCard/index";
+import Title from './components/Title/index'
+import Wrapper from './components/Wrapper/index'
 import API from "./utils/API";
 
 class SearchResults extends Component {
@@ -66,7 +68,9 @@ class SearchResults extends Component {
 
   render() {
     return (
-      <div className="container">
+      <Wrapper>
+        <Title>Employee Directory</Title>
+        <div className="container">
         <div className="row">
           <div className="col-md-6">
             <Search
@@ -100,6 +104,7 @@ class SearchResults extends Component {
           </table>
         </div>
       </div>
+      </Wrapper>
     );
   }
 }

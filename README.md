@@ -51,3 +51,9 @@ You are required to submit the following:
 
 * the URL to the Github repository
 
+
+
+NEED TO DO STILL
+  - SEARCH BUTTON REFRESHES PAGE, DOES NOT SEARCH
+  - ATTACH TITLE AND WRAPPER
+  - STYLE
