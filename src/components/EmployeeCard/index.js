@@ -1,8 +1,10 @@
 import React from "react";
-// import './style.css'
+import './style.css'
 
 function EmployeeCard(props) {
   return (
+    <table>
+      <tbody>
     <tr>
       <th className="img-container" scope="row">
         <img alt={props.firstName} src={props.picture} />
@@ -13,6 +15,8 @@ function EmployeeCard(props) {
       <td>{props.email}</td>
       <td>{props.phone}</td>
     </tr>
+    </tbody>
+    </table>
   );
 }
 

@@ -1,0 +1,44 @@
+  table {
+    border: 10px solid rgb(53, 143, 101);
+    padding: 8px;
+    width: 100%;
+  }
+  
+  table > .img-container {
+    height: 60%;
+    overflow: hidden;
+    text-align: center;
+    background:#6CADDC;
+  }
+  /* table > .img-container > img {
+    width: 60%
+  } */
+  
+td {
+    padding-left: .5rem;
+    padding-right: 1rem;
+    font-size: 15px;
+
+  }
+  
+td {
+    list-style-type: none;
+  }
+  
+td {
+    margin-top: 18px;
+  }
+  
+  /* table > .remove {
+    color: #ff1744;
+    font-size: 48px;
+    position: absolute;
+    top: -20px;
+    right: 5px;
+    cursor: pointer;
+  }
+  
+  table > .remove:hover {
+    color: #d50000;
+  }
+   */

@@ -32,12 +32,15 @@ class SearchResults extends Component {
   }
 
   filterEmployees = (searchkey) => {
-    const filterRes = this.state.result.filter(
+    console.log(searchkey);
+    console.log(this.state.result);
+
+    const filterResult = this.state.result.filter(
       (person) => person.firstName === searchkey
     );
 
     this.setState({
-      result: filterRes,
+      result: filterResult,
     });
   };
 
@@ -46,6 +49,8 @@ class SearchResults extends Component {
 
     const value = event.target.value;
     const name = event.target.name;
+    // console.log(value)
+    // console.log(name)
 
     this.filterEmployees(value);
     this.setState({
@@ -60,6 +65,8 @@ class SearchResults extends Component {
 
     const value = event.target.value;
     const name = event.target.name;
+    // console.log(value)
+    // console.log(name)
 
     this.setState({
       [name]: value,
@@ -68,10 +75,11 @@ class SearchResults extends Component {
 
   render() {
     return (
+      <div>
       <Wrapper>
         <Title>Employee Directory</Title>
-        <div className="container">
-        <div className="row">
+      </Wrapper>
+
           <div className="col-md-6">
             <Search
               value={this.state.search}
@@ -79,18 +87,20 @@ class SearchResults extends Component {
               handleFormSubmit={this.handleFormSubmit}
             />
           </div>
-        </div>
 
-        <div className="row">
-          <table className="table">
-            <tr>
-              <th scope="col">Photo</th>
-              <th>First Name</th>
-              <th scope="col">Last Name </th>
-              <th scope="col">Email</th>
-              <th scope="col">Phone</th>
-            </tr>
 
+        <div className="row col-md-12">
+            <table>
+              <thead>
+                <tr>
+              <th style={{ textAlign: 'center' }} scope='col'>Photo</th>
+              <th style={{ textAlign: 'center' }} scope='col'>First Name</th>
+              <th style={{ textAlign: 'center' }} scope='col'>Last Name </th>
+              <th style={{ textAlign: 'center' }} scope='col'>Email</th>
+              <th style={{ textAlign: 'center' }} scope='col'>Phone</th>
+              </tr>
+              </thead>
+              </table>
             {[...this.state.result].map((item) => (
               <EmployeeCard
                 picture={item.picture}
@@ -101,10 +111,10 @@ class SearchResults extends Component {
                 key={item.key}
               />
             ))}
-          </table>
         </div>
       </div>
-      </Wrapper>
+
+
     );
   }
 }

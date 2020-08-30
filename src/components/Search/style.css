@@ -1,0 +1,9 @@
+.form-group {
+    margin-bottom: 15px;
+}
+
+button {
+    margin-left: 5px;
+    background-color: rgb(53, 143, 101);
+    border-color: rgb(53, 143, 101);
+}
