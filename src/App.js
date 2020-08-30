@@ -103,7 +103,7 @@ class SearchResults extends Component {
               </thead>
               </table>
               {[...this.state.result].map((item) => (
-              <EmployeeCard style={{ width: '20%', textAlign: 'center' }}
+              <EmployeeCard
                 picture={item.picture}
                 firstName={item.firstName}
                 lastName={item.lastName}
