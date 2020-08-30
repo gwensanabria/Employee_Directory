@@ -4,6 +4,7 @@ import EmployeeCard from "./components/EmployeeCard/index";
 import Title from './components/Title/index'
 import Wrapper from './components/Wrapper/index'
 import API from "./utils/API";
+import './style.css'
 
 class SearchResults extends Component {
   state = {
@@ -93,16 +94,16 @@ class SearchResults extends Component {
             <table>
               <thead>
                 <tr>
-              <th style={{ textAlign: 'center' }} scope='col'>Photo</th>
-              <th style={{ textAlign: 'center' }} scope='col'>First Name</th>
-              <th style={{ textAlign: 'center' }} scope='col'>Last Name </th>
-              <th style={{ textAlign: 'center' }} scope='col'>Email</th>
-              <th style={{ textAlign: 'center' }} scope='col'>Phone</th>
+              <th style={{ width: '20%', textAlign: 'center' }}>Photo</th>
+              <th style={{ width: '20%', textAlign: 'center' }}>First Name</th>
+              <th style={{ width: '20%', textAlign: 'center' }}>Last Name </th>
+              <th style={{ width: '20%', textAlign: 'center' }}>Email</th>
+              <th style={{ width: '20%', textAlign: 'center' }}>Phone</th>
               </tr>
               </thead>
               </table>
-            {[...this.state.result].map((item) => (
-              <EmployeeCard
+              {[...this.state.result].map((item) => (
+              <EmployeeCard style={{ width: '20%', textAlign: 'center' }}
                 picture={item.picture}
                 firstName={item.firstName}
                 lastName={item.lastName}

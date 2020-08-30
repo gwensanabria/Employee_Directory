@@ -6,9 +6,9 @@ function EmployeeCard(props) {
     <table>
       <tbody>
     <tr>
-      <th className="img-container" scope="row">
+      <td className="img-container">
         <img alt={props.firstName} src={props.picture} />
-      </th>
+      </td>
 
       <td>{props.firstName}</td>
       <td>{props.lastName}</td>
